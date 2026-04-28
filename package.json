@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "description": "Shared crew helpers and Supabase Database type re-exports for Project Book and Crew Book apps.",
   "license": "UNLICENSED",
-  "private": true,
   "type": "module",
   "sideEffects": false,
   "main": "./dist/index.js",
