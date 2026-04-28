@@ -1,0 +1,61 @@
+{
+  "name": "@project-book/shared",
+  "version": "0.1.0",
+  "description": "Shared crew helpers and Supabase Database type re-exports for Project Book and Crew Book apps.",
+  "license": "UNLICENSED",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./crew-avatar": {
+      "types": "./dist/crew-avatar.d.ts",
+      "import": "./dist/crew-avatar.js"
+    },
+    "./crew-display-name": {
+      "types": "./dist/crew-display-name.d.ts",
+      "import": "./dist/crew-display-name.js"
+    },
+    "./crew-required-fields": {
+      "types": "./dist/crew-required-fields.d.ts",
+      "import": "./dist/crew-required-fields.js"
+    },
+    "./dial-codes": {
+      "types": "./dist/dial-codes.d.ts",
+      "import": "./dist/dial-codes.js"
+    },
+    "./supabase-types": {
+      "types": "./dist/supabase-types.d.ts",
+      "import": "./dist/supabase-types.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "restricted"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/<your-org>/project-book-shared.git"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0"
+  }
+}
